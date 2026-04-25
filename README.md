@@ -28,16 +28,14 @@ zstd-pas d input.txt.zst output.txt
 
 ## Using as a library
 
-Just copy functions from zstd-pas.lpr to your program. There are:
+Add ZstdSimple to your uses. These functions are available:
 
 ```
 function ZStd(Uncompressed: AnsiString): AnsiString;
 function UnZSTD(Compressed: AnsiString): AnsiString;
-function CompressFile(Infilename, Outfilename: String): Integer;
-function DecompressFile(Infilename, Outfilename: String): Integer;
+function ZStdCompressFile(const Infilename, Outfilename: String): Integer;
+function ZStdDecompressFile(const Infilename, Outfilename: String): Integer;
 ```
-
-In next realese these functions will move to a separate unit.
 
 ## License
 
